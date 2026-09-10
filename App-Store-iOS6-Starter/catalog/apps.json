@@ -1,0 +1,13 @@
+{
+  "store_name": "My App Store",
+  "version": "1.0",
+  "apps": [
+    {
+      "id": "example.app",
+      "name": "Example App",
+      "version": "1.0",
+      "description": "Replace this example with an app you are authorised to distribute.",
+      "download_url": ""
+    }
+  ]
+}

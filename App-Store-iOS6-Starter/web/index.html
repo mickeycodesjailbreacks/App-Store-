@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My App Store</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#f2f2f2;color:#222}
+header{background:#0a78d1;color:white;padding:18px;text-align:center;font-size:24px}
+main{max-width:700px;margin:auto;padding:14px}
+.app{background:white;border-radius:10px;padding:14px;margin:10px 0;box-shadow:0 1px 4px #bbb}
+button{background:#0a78d1;color:white;border:0;border-radius:7px;padding:9px 14px}
+</style>
+</head>
+<body>
+<header>My App Store</header>
+<main id="apps">Loading apps…</main>
+<script>
+fetch('../catalog/apps.json').then(r=>r.json()).then(data=>{
+ const box=document.getElementById('apps'); box.innerHTML='';
+ data.apps.forEach(app=>{
+   const el=document.createElement('div'); el.className='app';
+   el.innerHTML='<h2>'+app.name+'</h2><p>Version '+app.version+'</p><p>'+app.description+'</p>';
+   const b=document.createElement('button'); b.textContent='Get';
+   b.onclick=()=>app.download_url ? location.href=app.download_url : alert('No authorised download has been added yet.');
+   el.appendChild(b); box.appendChild(el);
+ });
+}).catch(()=>document.getElementById('apps').textContent='Could not load catalogue.');
+</script>
+</body>
+</html>
