@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>NTY_OS Setup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="setup-screen">
+
+```
+<div class="setup-box">
+
+    <div class="apple-logo">●</div>
+
+    <h1>NTY_OS</h1>
+
+    <p class="version">Version 2.0</p>
+
+    <p class="welcome">
+        Welcome to NTY_OS.
+    </p>
+
+    <p class="description">
+        An iOS 6-style web operating environment.
+    </p>
+
+    <button class="ios-button" onclick="startSetup()">
+        Begin Setup
+    </button>
+
+    <p class="small-text">
+        Runs in your web browser.
+    </p>
+
+</div>
+
+<script src="app.js"></script>
+```
+
+</body>
+</html>
